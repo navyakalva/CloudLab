@@ -1,0 +1,13 @@
+services:
+  tweetapp:
+    build:
+      context: C:\CaseStudy\TweetAppAzureDeployWithCosmosDb\TweetAppAzureDeployWithCosmosDb-main\CosmosDb\CosmosDb\TweetApp
+      dockerfile: TweetApp\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: tweetapp
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\845063\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+version: '3.4'
